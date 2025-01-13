@@ -1,60 +1,137 @@
-﻿// Console.WriteLine("a" == "a");
-// Console.WriteLine("a" == "A");
-// Console.WriteLine(1 == 2);
+﻿// Code sample 1
+// bool flag = true;
+// int value;
 
-// string myValue = "a";
-// Console.WriteLine(myValue == "a");
+// if (flag)
+// {
+//     value = 10;
+//     Console.WriteLine($"Inside the code block: {value}");
+// }
 
-// string value1 = " a";
-// string value2 = "A ";
-// Console.WriteLine(value1.Trim().ToLower() == value2.Trim().ToLower());
+// Console.WriteLine($"Outside the code block: {value}");
 
-// Console.WriteLine("a" != "a");
-// Console.WriteLine("a" != "A");
-// Console.WriteLine(1 != 2);
+// Code sample 1
+// bool flag = true;
+// int value = 0;
 
-// string myValue = "a";
-// Console.WriteLine(myValue != "a");
+// if (flag)
+// {
+//     value = 10;
+//     Console.WriteLine($"Inside the code block: {value}");
+// }
 
-// string pangram = "The quick brown fox jumps over the lazy dog.";
-// Console.WriteLine(!pangram.Contains("fox"));
-// Console.WriteLine(!pangram.Contains("cow"));
+// Console.WriteLine($"Outside the code block: {value}");
+// path when flag = true
+// int value;
+// value = 10;
+// Console.WriteLine($"Inside the code block: {value}");
+// Console.WriteLine($"Outside the code block: {value}");
+// int value = 5;
+// if (value > 0)
+// {
+//     int valueTwo = 6;
+//     value = value + valueTwo;
+// }
+// Console.WriteLine(value);
+// int[] numbers = { 4, 8, 15, 16, 23, 42 };
+// int total = 0;
+// bool found = false;
 
-// int saleAmount = 1001;
+// foreach (int number in numbers)
+// {
+//     total += number;
 
-// Console.WriteLine($"Discount: {(saleAmount > 1000 ? 100 : 50)}");
+//     if (number == 42)
+//         found = true;
+// }
 
-// Random flip = new Random();
-// int coin = flip.Next(0, 2);
-// Console.WriteLine($"Coin toss: {(coin == 0 ? "Heads" : "Tails")}");
+// if (found) 
+//     Console.WriteLine("Set contains 42");
 
-// Random hierachy = new Random();
-string permission = "Admin|Manager";
-int level = 0;
 
-if (permission.Contains("Admin"))
-{
-    if (level > 55)
-    {
-        Console.WriteLine("Welcome, Super Admin user.");
-    }
-    else
-    {
-        Console.WriteLine("Welcome, Admin user.");
-    }
-}
-else if (permission.Contains("Manager"))
-{
-    if (level >= 20)
-    {
-        Console.WriteLine("Contact an Admin for access.");
-    }
-    else
-    {
-        Console.WriteLine("You do not sufficient privileges");
-    }
-}
-else
-{
-    Console.WriteLine("You do not sufficient privileges.");
-}
+// Console.WriteLine($"Total: {total}");
+
+// int employeeLevel = 200;
+// string employeeName = "John Smith";
+
+// string title = "";
+
+// switch (employeeLevel)
+// {
+
+//     case 100:
+//     case 200:
+//         title = "Senior Associate";
+//         break;
+//     case 300:
+//         title = "Manager";
+//         break;
+//     case 400:
+//         title = "Senior Manager";
+//         break;
+//     default:
+//         title = "Associate";
+//         break;
+// }
+// Console.WriteLine($"{employeeName}, {title}");
+
+// SKU = Stock Keeping Unit. 
+// SKU value format: <product #>-<2-letter color code>-<size code>
+// string sku = "01-MN-L";
+
+// string[] product = sku.Split('-');
+
+// string type = "";
+// string color = "";
+// string size = "";
+
+// switch (product[0])
+// {
+//     case "01":
+//         type = "Sweat shirt";
+//         break;
+
+//     case "02":
+//         type = "T-Shirt";
+//         break;
+
+//     case "03":
+//         type = "Sweat pants";
+//         break;
+//     default:
+//         type = "Other";
+//         break;
+// }
+
+// switch (product[1])
+// {
+//     case "BL":
+//         color = "Black";
+//         break;
+
+//     case "MN":
+//         color = "Maroon";
+//         break;
+//     default:
+//         color = "White";
+//         break;
+// }
+
+// switch (product[2])
+// {
+//     case "S":
+//         size = "Small";
+//         break;
+//     case "M":
+//         size = "Medium";
+//         break;
+//     case "L":
+//         size = "Large";
+//         break;
+//     default:
+//         size = "One Size Fits All";
+//         break;
+// }
+
+// Console.WriteLine($"Product: {size} {color} {type}");
+
