@@ -1,0 +1,14 @@
+/Users/gajgajia/Documents/cshart/ConsoleApp1/CsharpLearning1/bin/Debug/net8.0/CsharpLearning1
+/Users/gajgajia/Documents/cshart/ConsoleApp1/CsharpLearning1/bin/Debug/net8.0/CsharpLearning1.deps.json
+/Users/gajgajia/Documents/cshart/ConsoleApp1/CsharpLearning1/bin/Debug/net8.0/CsharpLearning1.runtimeconfig.json
+/Users/gajgajia/Documents/cshart/ConsoleApp1/CsharpLearning1/bin/Debug/net8.0/CsharpLearning1.dll
+/Users/gajgajia/Documents/cshart/ConsoleApp1/CsharpLearning1/bin/Debug/net8.0/CsharpLearning1.pdb
+/Users/gajgajia/Documents/cshart/ConsoleApp1/CsharpLearning1/obj/Debug/net8.0/CsharpLearning1.GeneratedMSBuildEditorConfig.editorconfig
+/Users/gajgajia/Documents/cshart/ConsoleApp1/CsharpLearning1/obj/Debug/net8.0/CsharpLearning1.AssemblyInfoInputs.cache
+/Users/gajgajia/Documents/cshart/ConsoleApp1/CsharpLearning1/obj/Debug/net8.0/CsharpLearning1.AssemblyInfo.cs
+/Users/gajgajia/Documents/cshart/ConsoleApp1/CsharpLearning1/obj/Debug/net8.0/CsharpLearning1.csproj.CoreCompileInputs.cache
+/Users/gajgajia/Documents/cshart/ConsoleApp1/CsharpLearning1/obj/Debug/net8.0/CsharpLearning1.dll
+/Users/gajgajia/Documents/cshart/ConsoleApp1/CsharpLearning1/obj/Debug/net8.0/refint/CsharpLearning1.dll
+/Users/gajgajia/Documents/cshart/ConsoleApp1/CsharpLearning1/obj/Debug/net8.0/CsharpLearning1.pdb
+/Users/gajgajia/Documents/cshart/ConsoleApp1/CsharpLearning1/obj/Debug/net8.0/CsharpLearning1.genruntimeconfig.cache
+/Users/gajgajia/Documents/cshart/ConsoleApp1/CsharpLearning1/obj/Debug/net8.0/ref/CsharpLearning1.dll
