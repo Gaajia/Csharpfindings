@@ -73,7 +73,8 @@ foreach (string name in studentNames)
     currentStudentExamScore = (decimal)(sumExamScores) / examAssignments;
     currentStudentExtraCreditScore = (decimal)(sumExtraCreditScores) / gradedExtraCreditAssignments;
 
-    currentStudentGrade = (decimal)((decimal)sumExamScores + ((decimal)sumExtraCreditScores / 10)) / examAssignments;
+    // currentStudentGrade = (decimal)((decimal)sumExamScores + ((decimal)sumExtraCreditScores / 10)) / examAssignments;
+    currentStudentGrade = (currentStudentExamScore * 0.9m) + (currentStudentExtraCreditScore * 0.1m);
 
     if (currentStudentGrade >= 97)
         currentStudentLetterGrade = "A+";
