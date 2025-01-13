@@ -12,3 +12,4 @@
 /Users/gajgajia/Documents/cshart/ConsoleApp1/CsharpLearning1/obj/Debug/net8.0/CsharpLearning1.pdb
 /Users/gajgajia/Documents/cshart/ConsoleApp1/CsharpLearning1/obj/Debug/net8.0/CsharpLearning1.genruntimeconfig.cache
 /Users/gajgajia/Documents/cshart/ConsoleApp1/CsharpLearning1/obj/Debug/net8.0/ref/CsharpLearning1.dll
+/Users/gajgajia/Documents/cshart/ConsoleApp1/CsharpLearning1/obj/Debug/net8.0/CsharpLearning1.sourcelink.json
