@@ -1,137 +1,68 @@
-﻿// Code sample 1
-// bool flag = true;
-// int value;
+﻿// Random random = new Random();
+// int current = random.Next(1, 11);
 
-// if (flag)
+// do
 // {
-//     value = 10;
-//     Console.WriteLine($"Inside the code block: {value}");
-// }
+//     current = random.Next(1, 11);
+//     if (current >= 8) continue;
 
-// Console.WriteLine($"Outside the code block: {value}");
+//     Console.WriteLine(current);
+// } while (current != 7);
 
-// Code sample 1
-// bool flag = true;
-// int value = 0;
+// // while (current >= 3)
+// // {
+// //     Console.WriteLine(current);
+// //     current = random.Next(1, 11);
+// // }
+// // Console.WriteLine($"Last Number: {current}");
 
-// if (flag)
+//MY WAY
+// Random random = new Random();
+// int attack = 0;
+// int hero = 10;
+// int monster = 10;
+
+// do
 // {
-//     value = 10;
-//     Console.WriteLine($"Inside the code block: {value}");
-// }
-
-// Console.WriteLine($"Outside the code block: {value}");
-// path when flag = true
-// int value;
-// value = 10;
-// Console.WriteLine($"Inside the code block: {value}");
-// Console.WriteLine($"Outside the code block: {value}");
-// int value = 5;
-// if (value > 0)
-// {
-//     int valueTwo = 6;
-//     value = value + valueTwo;
-// }
-// Console.WriteLine(value);
-// int[] numbers = { 4, 8, 15, 16, 23, 42 };
-// int total = 0;
-// bool found = false;
-
-// foreach (int number in numbers)
-// {
-//     total += number;
-
-//     if (number == 42)
-//         found = true;
-// }
-
-// if (found) 
-//     Console.WriteLine("Set contains 42");
-
-
-// Console.WriteLine($"Total: {total}");
-
-// int employeeLevel = 200;
-// string employeeName = "John Smith";
-
-// string title = "";
-
-// switch (employeeLevel)
-// {
-
-//     case 100:
-//     case 200:
-//         title = "Senior Associate";
+//        if (hero <= 0)
+//     {
+//         Console.WriteLine("Game Over, Hero Lost!");
 //         break;
-//     case 300:
-//         title = "Manager";
+//     }
+//      if (monster <= 0)
+//     {
+//         Console.WriteLine("Game Over, Monster Lost!");
 //         break;
-//     case 400:
-//         title = "Senior Manager";
-//         break;
-//     default:
-//         title = "Associate";
-//         break;
-// }
-// Console.WriteLine($"{employeeName}, {title}");
+//     }
+//     attack = random.Next(1, 11);
+//     monster -= attack;
+//     Console.WriteLine($"Hero took a swing the damage is {attack} now the health of the monster is {monster}");
+//     if (monster > 0)
+//     {
+//         attack = random.Next(1, 11);
+//         hero -= attack;
+//         Console.WriteLine($"The monster took a big swing at the hero the damage has taken away {hero} of heros health.");
+//     }
 
-// SKU = Stock Keeping Unit. 
-// SKU value format: <product #>-<2-letter color code>-<size code>
-// string sku = "01-MN-L";
 
-// string[] product = sku.Split('-');
+// } while (hero != 0 | monster != 0);
 
-// string type = "";
-// string color = "";
-// string size = "";
+//Solution from Microsoft.
+int hero = 10;
+int monster = 10;
 
-// switch (product[0])
-// {
-//     case "01":
-//         type = "Sweat shirt";
-//         break;
+Random dice = new Random();
+do
+{
+    int roll = dice.Next(1, 11);
+    monster -= roll;
+    Console.WriteLine($"Monster was damaged and lost {roll} health and now the monster health {monster}");
 
-//     case "02":
-//         type = "T-Shirt";
-//         break;
+    if (monster <= 0) continue;
 
-//     case "03":
-//         type = "Sweat pants";
-//         break;
-//     default:
-//         type = "Other";
-//         break;
-// }
+    roll = dice.Next(1, 11);
+    hero -= roll;
+    Console.WriteLine($"Hero was damaged and lost {roll} health and now has {hero} health.");
 
-// switch (product[1])
-// {
-//     case "BL":
-//         color = "Black";
-//         break;
-
-//     case "MN":
-//         color = "Maroon";
-//         break;
-//     default:
-//         color = "White";
-//         break;
-// }
-
-// switch (product[2])
-// {
-//     case "S":
-//         size = "Small";
-//         break;
-//     case "M":
-//         size = "Medium";
-//         break;
-//     case "L":
-//         size = "Large";
-//         break;
-//     default:
-//         size = "One Size Fits All";
-//         break;
-// }
-
-// Console.WriteLine($"Product: {size} {color} {type}");
-
+} while (hero > 0 && monster > 0);
+Console.WriteLine(hero > monster ? "hero wins" : "monster wins");
