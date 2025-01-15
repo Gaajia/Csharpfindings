@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZoSbwRL+w9c=",
+  "success": true,
+  "projectFilePath": "/Users/gajgajia/Documents/cshart/ConsoleApp1/CsharpLearning1/CsharpLearning1.csproj",
+  "expectedPackageFiles": [
+    "/Users/gajgajia/.nuget/packages/microsoft.netcore.app.ref/8.0.11/microsoft.netcore.app.ref.8.0.11.nupkg.sha512",
+    "/Users/gajgajia/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.11/microsoft.aspnetcore.app.ref.8.0.11.nupkg.sha512",
+    "/Users/gajgajia/.nuget/packages/microsoft.netcore.app.host.osx-arm64/8.0.11/microsoft.netcore.app.host.osx-arm64.8.0.11.nupkg.sha512"
+  ],
+  "logs": []
+}
