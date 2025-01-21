@@ -1,90 +1,117 @@
-﻿// int first = 2;
-// string second = "4";
-// string result = first + second;
-// Console.WriteLine(result);
-// int myInt = 3;
-// Console.WriteLine($"int: {myInt}");
+﻿// using System.Buffers;
+// using System.Diagnostics.CodeAnalysis;
+// using System.Reflection.PortableExecutable;
+// using System.Runtime.CompilerServices;
+// using System.Security.Cryptography.X509Certificates;
 
-// decimal myDecimal = myInt;
-// Console.WriteLine($"decimal: {myDecimal}");
+// // string[] pallets = ["B14", "A11", "B12", "A13"];
 
-// decimal myDecimal = 3.14m;
-// Console.WriteLine($"decimal: {myDecimal}");
+// // Console.WriteLine("Sorted...");
+// // Array.Sort(pallets);
+// // foreach (string pallet in pallets)
+// // {
+// //     Console.WriteLine($"-- {pallet}");
+// // }
+// // Console.WriteLine("Reversed...");
+// // Array.Reverse(pallets);
+// // foreach (string pallet in pallets)
+// // {
+// //     Console.WriteLine($"-- {pallet}");
+// // }
+// // Console.WriteLine($"Before: {pallets[0].ToLower()}");
+// // Array.Clear(pallets, 0, 2);
+// // // if (pallets[0] != null)
+// // // Console.WriteLine($"After: {pallets[0].ToLower()}");
+// // Console.WriteLine($"Clearing 2 ... count:{pallets.Length}");
+// // foreach (string pallet in pallets)
+// // {
+// //     Console.WriteLine($"-- {pallet}");
+// // }
+// // Console.WriteLine($"Before: {pallets[0].ToLower()}");
+// // Array.Clear(pallets, 0, 2);
 
-// int myInt = (int)myDecimal;
-// Console.WriteLine($"int: {myInt}");
+// // // Check if element is null before trying to use ToLower()
+// // if (pallets[0] != null)
+// // {
+// //     Console.WriteLine($"After: {pallets[0].ToLower()}");
+// // }
+// // else
+// // {
+// //     Console.WriteLine("After: Element is null");
+// // }
 
-// decimal myDecimal = 1.23456789m;
-// float myFloat = (float)myDecimal;
+// // // Print all elements to see what happened
+// // foreach (var pallet in pallets)
+// // {
+// //     Console.WriteLine($"-- {pallet ?? "null"}");  // Print "null" if element is null
+// // }
+// // Console.WriteLine("");
+// // Array.Resize(ref pallets, 6);
+// // Array.Resize(ref pallets, 6);
+// // Console.WriteLine($"Resizing 6 .. count: {pallets.Length}");
+// // pallets[4] = "C01";
+// // pallets[5] = "C02";
+// // foreach(var pallet in pallets)
+// // {
+// //     Console.WriteLine($"-- {pallet}");
+// // }
 
-// Console.WriteLine($"Decimal: {myDecimal}");
-// Console.WriteLine($"Float  : {myFloat}");
+// // Console.WriteLine("");
+// // Array.Resize(ref pallets, 3);
+// // Console.WriteLine($"Reiszing 3 ... count: {pallets.Length}");
+// // foreach (var pallet in pallets)
+// // {
+// //     Console.WriteLine($"-- {pallet}");
+// // }
+// // string value = "abc123";
+// // char[] valueArray = value.ToCharArray();
+// // Array.Reverse(valueArray);
+// // string result = new string(valueArray);
+// // //String.Join - joins chars with a separator
+// // // string result = String.Join("", valueArray);
+// // Console.WriteLine(result);
+// // // string[] items = result.Split(',');
+// // // foreach (string item in items)
+// // // {
+// // //     Console.WriteLine(item);
+// // // }
 
+// string pangram = "The quick brown fox jumps over the lazy dog";
+// string[] message = pangram.Split();
+// string[] newMessage = new string[message.Length];
 
-
-// string value = "30";
-// int result = 0;
-// if (int.TryParse(value, out result))
+// for (int i = 0; i < message.Length; i++)
 // {
-//     Console.WriteLine($"Measurement: {result}");
+//     //current word to a char -> "quick" "q","u","i","c","k"
+//     char[] letters = message[i].ToCharArray();
+//     // ['q','u','i','c','k'] becomes ['k','c','i','u','q']
+//     Array.Reverse(letters);
+//     // new string(letters) takes the reversed characters and joins them back together into one word
+//     // We need this because we can't store characters in a string array - it needs full words
+//     // ['k','c','i','u','q'] becomes "kciuq"
+//     // newMessage[i] puts this reversed word into position i of our new array
+//     newMessage[i] = new string(letters);
 
 // }
-// else
-// {
-//     Console.WriteLine("Unable to report the measurement.");
-// }
-// if (result > 0)
-// {
-//     Console.WriteLine($"Measurement (w/ offset): {50 + result}");
-// }
+// // Joins all the reversed words with spaces between them to make the final reversed sentence
+// Console.WriteLine(String.Join(" ",newMessage));
+string orderStream = "B123,C234,A345,C15,B177,G3003,C235,B179";
+string[] orderId = orderStream.Split(",");
+string[] hierarchy = new string[orderId.Length];
 
-// string[] values = { "12.3", "45", "ABC", "11", "DEF" };
-// double result = 0;
-// string charac = "";
-
-// for (int i = 0; i < values.Length; i++)
-// {
-
-//     if (double.TryParse(values[i], out double number))
-//     {
-//         result += number;
-//     }
-//     else
-//     {
-//         charac += values[i];
-//     }
-
-
-// }
-
-// Console.WriteLine($"{result} , {charac}");
-
-int value1 = 11;
-decimal value2 = 6.2m;
-float value3 = 4.3f;
-
-// Hint: You need to round the result to nearest integer (don't just truncate)
-Console.WriteLine($"Divide value1 by value2, display the result as an int:");
-if (value1 % 2 != 0)
+for (int i = 0; i < orderId.Length; i++)
 {
-    int result = Convert.ToInt32(value1 / value2);
+   // Check if order number is exactly 4 characters long
+    if (orderId[i].Length != 4)
+    {
+        hierarchy[i] = orderId[i] + "  -Error";
+    }
+    else
+    {
 
-    Console.WriteLine(result);
+        hierarchy[i] = orderId[i];
+    }// Store the original order ID
 }
 
-// Your code here to set result2
-Console.WriteLine($"Divide value2 by value3, display the result as a decimal:");
-if (value3 != 0)
-{
-
-    decimal result2 = value2 / Convert.ToDecimal(value3);
-    Console.WriteLine($"Result as decimal: {result2}");
-}
-
-// Your code here to set result3
-Console.WriteLine($"Divide value3 by value1, display the result as a float: ");
-if (value3 != 0)
-{
-    float result3 = value3 / value1;
-    Console.WriteLine($"{result3}");
-}
+Array.Sort(hierarchy);
+Console.Write(String.Join("\n", hierarchy));
