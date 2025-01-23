@@ -1,117 +1,169 @@
-﻿// using System.Buffers;
-// using System.Diagnostics.CodeAnalysis;
-// using System.Reflection.PortableExecutable;
-// using System.Runtime.CompilerServices;
-// using System.Security.Cryptography.X509Certificates;
+﻿// string first = "Hello";
+// string second = "World!";
+// string result = string.Format("{0} {1}!", first, second);
+// Console.WriteLine("{0} {0} {0}!", first, second);
 
-// // string[] pallets = ["B14", "A11", "B12", "A13"];
+// Console.WriteLine(result);
+// decimal price = 123.45m;
+// int discount = 50;
+// Console.WriteLine($"Price: {price:C} (save {discount:C})");
 
-// // Console.WriteLine("Sorted...");
-// // Array.Sort(pallets);
-// // foreach (string pallet in pallets)
-// // {
-// //     Console.WriteLine($"-- {pallet}");
-// // }
-// // Console.WriteLine("Reversed...");
-// // Array.Reverse(pallets);
-// // foreach (string pallet in pallets)
-// // {
-// //     Console.WriteLine($"-- {pallet}");
-// // }
-// // Console.WriteLine($"Before: {pallets[0].ToLower()}");
-// // Array.Clear(pallets, 0, 2);
-// // // if (pallets[0] != null)
-// // // Console.WriteLine($"After: {pallets[0].ToLower()}");
-// // Console.WriteLine($"Clearing 2 ... count:{pallets.Length}");
-// // foreach (string pallet in pallets)
-// // {
-// //     Console.WriteLine($"-- {pallet}");
-// // }
-// // Console.WriteLine($"Before: {pallets[0].ToLower()}");
-// // Array.Clear(pallets, 0, 2);
+// using System.Globalization;
+// decimal measurement = 123456.78912m;
+// string formatter = measurement.ToString("C", new CultureInfo("en-GB"));
+// Console.WriteLine(formatter);
+// decimal price = 67.55m;
+// decimal salePrice = 59.99m;
 
-// // // Check if element is null before trying to use ToLower()
-// // if (pallets[0] != null)
-// // {
-// //     Console.WriteLine($"After: {pallets[0].ToLower()}");
-// // }
-// // else
-// // {
-// //     Console.WriteLine("After: Element is null");
-// // }
+// string yourDiscount = String.Format("You saved {0:C2} off the regular {1:C2} price. ", (price - salePrice), price);
 
-// // // Print all elements to see what happened
-// // foreach (var pallet in pallets)
-// // {
-// //     Console.WriteLine($"-- {pallet ?? "null"}");  // Print "null" if element is null
-// // }
-// // Console.WriteLine("");
-// // Array.Resize(ref pallets, 6);
-// // Array.Resize(ref pallets, 6);
-// // Console.WriteLine($"Resizing 6 .. count: {pallets.Length}");
-// // pallets[4] = "C01";
-// // pallets[5] = "C02";
-// // foreach(var pallet in pallets)
-// // {
-// //     Console.WriteLine($"-- {pallet}");
-// // }
+// yourDiscount += $"A discount of {((price - salePrice)/price):P2}!"; //inserted
+// Console.WriteLine(yourDiscount);
 
-// // Console.WriteLine("");
-// // Array.Resize(ref pallets, 3);
-// // Console.WriteLine($"Reiszing 3 ... count: {pallets.Length}");
-// // foreach (var pallet in pallets)
-// // {
-// //     Console.WriteLine($"-- {pallet}");
-// // }
-// // string value = "abc123";
-// // char[] valueArray = value.ToCharArray();
-// // Array.Reverse(valueArray);
-// // string result = new string(valueArray);
-// // //String.Join - joins chars with a separator
-// // // string result = String.Join("", valueArray);
-// // Console.WriteLine(result);
-// // // string[] items = result.Split(',');
-// // // foreach (string item in items)
-// // // {
-// // //     Console.WriteLine(item);
-// // // }
+// string input = "Pad this";
+// Console.WriteLine(input.PadLeft(12, '-'));
+// Console.WriteLine(input.PadRight(12, '-'));
 
-// string pangram = "The quick brown fox jumps over the lazy dog";
-// string[] message = pangram.Split();
-// string[] newMessage = new string[message.Length];
+// string paymentId = "769C";
+// string payeeName = "Mr. Stephen Ortega";
+// string test = "wazzaup"
 
-// for (int i = 0; i < message.Length; i++)
+// var formattedLine = paymentId.PadRight(6);
+// formattedLine += payeeName.PadRight(24);
+// formattedLine += test.PadRight(3);
+
+// Console.WriteLine(formattedLine);
+
+
+// string customerName = "Ms. Barros";
+
+// string currentProduct = "Magic Yield";
+// int currentShares = 2975000;
+// decimal currentReturn = 0.1275m;
+// decimal currentProfit = 55000000.0m;
+
+// string newProduct = "Glorious Future";
+// decimal newReturn = 0.13125m;
+// decimal newProfit = 63000000.0m;
+
+// // Your logic here
+
+// Console.WriteLine("Here's a quick comparison:\n");
+
+// string comparisonMessage = "";
+
+// // Your logic here
+
+// Console.WriteLine(comparisonMessage);
+
+// string message = "Find what is (inside the parentheses)";
+// int openingPosition = message.IndexOf('(');
+// int closingPosition = message.IndexOf(')');
+// //adding to the position to avoid opening bracket.
+// openingPosition += 1;
+
+// int length = closingPosition - openingPosition;
+// Console.WriteLine(message.Substring(openingPosition, length));
+// string message = "What is the value <span>between the tags</span>?";
+// const string openSpan = "<span>";
+// const string closeSpan = "</span>";
+
+// int openingPosition = message.IndexOf(openSpan);
+// int closingPosition = message.IndexOf(closeSpan);
+
+// openingPosition += openSpan.Length;
+// int length = closingPosition - openingPosition;
+// Console.WriteLine(message.Substring(openingPosition, length));
+
+// string message = "(What if) I am (only interested) in the last (set of parentheses)?";
+// while (true)
 // {
-//     //current word to a char -> "quick" "q","u","i","c","k"
-//     char[] letters = message[i].ToCharArray();
-//     // ['q','u','i','c','k'] becomes ['k','c','i','u','q']
-//     Array.Reverse(letters);
-//     // new string(letters) takes the reversed characters and joins them back together into one word
-//     // We need this because we can't store characters in a string array - it needs full words
-//     // ['k','c','i','u','q'] becomes "kciuq"
-//     // newMessage[i] puts this reversed word into position i of our new array
-//     newMessage[i] = new string(letters);
+//     //opening position
+//     int openingPosition = message.IndexOf('(');
+//     //if no more opening brackets == -1 then it would break
+//     if (openingPosition == -1) break;
+//     //add to avoid the current opening bracket. 
+//     openingPosition += 1;
+//     //checking for closing bracket
+//     int closingPosition = message.IndexOf(')');
+//     //get hte amount of charecters. in the current parenthesis. 
+//     int length = closingPosition - openingPosition;
+//     //print out the current iteration of what's inside the parenthesis.
+//     Console.WriteLine(message.Substring(openingPosition, length));
+//     //avoid the same current closing parethensis by extracting what's been done. and keeping the remaining string.  
+//     message = message.Substring(closingPosition + 1);
+// }
+// string message = "Hello, world!";
+// char[] charsToFind = { 'a', 'e', 'i' };
+
+// int index = message.IndexOfAny(charsToFind);
+
+// Console.WriteLine($"Found '{message[index]}' in '{message}' at index: {index}.");
+// string message = "Help (find) the {opening symbols}";
+// Console.WriteLine($"Searching THIS Message: {message}");
+// char[] openSymbols = { '[', '{', '(' };
+// int startPosition = 5;
+// int openingPosition = message.IndexOfAny(openSymbols);
+// Console.WriteLine($"Found WITHOUT using startPosition: {message.Substring(openingPosition)}");
+
+// openingPosition = message.IndexOfAny(openSymbols, startPosition);
+// Console.WriteLine($"Found WITH using startPosition {startPosition}:  {message.Substring(openingPosition)}");
+
+// string message = "(What if) I have [different symbols] but every {open symbol} needs a [matching closing symbol]?";
+
+// char[] openSymbols = { '[', '{', '(' };
+
+// int closingPosition = 0;
+// while (true)
+// {
+//     int openingPosition = message.IndexOfAny(openSymbols, closingPosition);
+
+//     if (openingPosition == -1)
+//     {
+//         break;
+//     }
+//     string currentSymbol = message.Substring(openingPosition, 1);
+//     char matchingSymbol = ' ';
+//     switch (currentSymbol)
+//     {
+//         case "[":
+//             matchingSymbol = ']';
+//             break;
+//         case "{":
+//             matchingSymbol = '}';
+//             break;
+//         case "(":
+//             matchingSymbol = ')';
+//             break;
+
+//     }
+//     openingPosition += 1;
+//     closingPosition = message.IndexOf(matchingSymbol, openingPosition);
+
+//     int length = closingPosition - openingPosition;
+//     Console.WriteLine(message.Substring(openingPosition, length));
 
 // }
-// // Joins all the reversed words with spaces between them to make the final reversed sentence
-// Console.WriteLine(String.Join(" ",newMessage));
-string orderStream = "B123,C234,A345,C15,B177,G3003,C235,B179";
-string[] orderId = orderStream.Split(",");
-string[] hierarchy = new string[orderId.Length];
 
-for (int i = 0; i < orderId.Length; i++)
-{
-   // Check if order number is exactly 4 characters long
-    if (orderId[i].Length != 4)
-    {
-        hierarchy[i] = orderId[i] + "  -Error";
-    }
-    else
-    {
+// string data = "12345John Smith          5000  3  ";
+// string updatedData = data.Remove(5, 20);
+// Console.WriteLine(updatedData);
 
-        hierarchy[i] = orderId[i];
-    }// Store the original order ID
-}
+// string message = "This--is--ex-amp-le--da-ta";
+// message = message.Replace("--", " ");
+// message = message.Replace("-", "");
+// Console.WriteLine(message);
+// const string input = "<div><h2>Widgets &trade;</h2><span>5000</span></div>";
 
-Array.Sort(hierarchy);
-Console.Write(String.Join("\n", hierarchy));
+// int takeAway = input.IndexOf("<span>", 1);
+// string quantity = input.Substring(takeAway + 5, 5);
+// Console.WriteLine(quantity);
+// Console.WriteLine("");
+
+// // Your work here
+// string replacer = input.Replace("&trade", "&reg");
+// int divCloserStart = replacer.IndexOf("</div>");
+// replacer = "Output: " + replacer.Remove(divCloserStart);
+
+// Console.WriteLine(replacer);
+// // Console.WriteLine(output);
