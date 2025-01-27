@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "RsCTxVw0NFU=",
+  "success": true,
+  "projectFilePath": "/Users/gajgajia/Documents/cshart/ConsoleApp1/Guided-project-Work-with-variable-data-in-CSharp-main/Starter/Starter.csproj",
+  "expectedPackageFiles": [
+    "/Users/gajgajia/.nuget/packages/microsoft.netcore.app.ref/8.0.11/microsoft.netcore.app.ref.8.0.11.nupkg.sha512",
+    "/Users/gajgajia/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.11/microsoft.aspnetcore.app.ref.8.0.11.nupkg.sha512",
+    "/Users/gajgajia/.nuget/packages/microsoft.netcore.app.host.osx-arm64/8.0.11/microsoft.netcore.app.host.osx-arm64.8.0.11.nupkg.sha512"
+  ],
+  "logs": []
+}
